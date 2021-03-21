@@ -1,29 +1,116 @@
-# README #
+npm run-script lint
+npm run-script build
+firebase serve --only functions
 
-This README would normally document whatever steps are necessary to get your application up and running.
+firebase target:apply hosting deve-weather deve-weather
+firebase deploy --only hosting:deve-weather
 
-### What is this repository for? ###
+{
+  "hosting": {
+    "target": "deve-weather",
+    "public": "weather",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ],
+    "headers": [
+      {
+        "source": "**/*.@(js|html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store, max-age=0"
+          }
+        ]
+      }
+    ]
+  }
+}
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+firebase target:apply hosting staging-weather staging-weather
+firebase deploy --only hosting:staging-weather
 
-### How do I get set up? ###
+{
+  "hosting": {
+    "target": "staging-weather",
+    "public": "weather",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ],
+    "headers": [
+      {
+        "source": "**/*.@(js|html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store, max-age=0"
+          }
+        ]
+      }
+    ]
+  }
+}
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+firebase target:apply hosting weather4you weather4you
+firebase deploy --only hosting:weather4you
 
-### Contribution guidelines ###
+{
+  "hosting": {
+    "target": "weather4you",
+    "public": "weather",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ],
+    "headers": [
+      {
+        "source": "**/*.@(js|html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store, max-age=0"
+          }
+        ]
+      }
+    ]
+  }
+}
 
-* Writing tests
-* Code review
-* Other guidelines
+Deve Rules
 
-### Who do I talk to? ###
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if
+          request.time < timestamp.date(2021, 1, 24);
+    }
+  }
+}
 
-* Repo owner or admin
-* Other community or team contact
+Prod Rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

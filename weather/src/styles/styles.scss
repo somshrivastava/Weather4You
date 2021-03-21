@@ -1,0 +1,102 @@
+@import 'variables';
+@import 'navbar';
+@import 'footer';
+
+html {
+    font-family: 'Montserrat' !important;
+    font-size: 10px; 
+
+    & body {
+        background: $light;
+        font-family: 'Montserrat' !important;
+
+        & .router-outlet {
+            min-height: calc(100vh - 50px);
+            padding: 1.5rem;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        & .row {
+            margin: 0 !important;
+        }
+ 
+        & .accent {
+            color: $accent;
+        }
+
+        & .white {
+            color: $white;
+        }
+
+        & .grey {
+            color: $grey;
+        }
+
+        & .black {
+            color: $black;
+        }
+
+        & .map-background {
+            height: 175px;
+            width: 100%;
+        }
+
+        & .accent-background {
+            background: $accent;
+        }
+
+        & .white-background {
+            background: $white;
+        }
+
+        & .weather-information {
+            border-radius: 1rem;
+        }
+
+        & .justify-content-evenly {
+            justify-content: space-evenly;
+        }
+
+        & .light-right-border {
+            border-right: 2px solid $grey;
+        }
+
+        & .light-light-bottom-border {
+            border-bottom: 1px solid $grey;
+        }
+        
+        & .pointer {
+            cursor: pointer;
+        }
+
+        & p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        & .p-dialog {
+            width: 90% !important;
+        }
+
+        & .p-inputtext, .p-button {
+            border: none;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+
+        & .p-toast {
+            font-size: 1.5rem;
+            width: 50%;
+        }
+    }
+
+    & .p-component {
+        font-family: 'Montserrat' !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .p-toast {
+        width: 90% !important;
+    }
+}

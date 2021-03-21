@@ -1,0 +1,28 @@
+.navbar {
+    border-bottom: 2px solid $dark;
+    padding: 1rem 2rem;
+    background: $dark;
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 1rem 1rem;
+
+    &-brand {
+        font-size: 1.5rem;
+        width: 15rem;
+        color: $accent;
+    }
+
+    & .navbar-nav {
+
+        & .nav-item {
+            
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}
