@@ -32,12 +32,12 @@ firebase deploy --only hosting:deve-weather
   }
 }
 
-firebase target:apply hosting staging-weather staging-weather
-firebase deploy --only hosting:staging-weather
+firebase target:apply hosting staging-weather4you staging-weather4you
+firebase deploy --only hosting:staging-weather4you
 
 {
   "hosting": {
-    "target": "staging-weather",
+    "target": "staging-weather4you",
     "public": "weather",
     "ignore": [
       "firebase.json",

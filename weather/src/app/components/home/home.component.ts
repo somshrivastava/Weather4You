@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (expectedMinutes > 60) {
       expectedMinutes - 60;
     }
-    if (lastUpdated == null || new Date().getMinutes() == expectedMinutes) {
+    if (lastUpdated == null || new Date().getMinutes() >= expectedMinutes) {
       this.weatherService.loadTodayWeather(this.location['latitude'], this.location['longitude']);
       this.weatherService.loadForecast(this.location['latitude'], this.location['longitude']);
     } else {
