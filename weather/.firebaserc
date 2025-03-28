@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "prod-6a983": {
+      "hosting": {
+        "weather4you": [
+          "weather4you"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

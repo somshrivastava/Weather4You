@@ -2,11 +2,15 @@
     <h3 class="pt-4 accent text-center">Location Details</h3>
     <div class="p-fluid">
         <div class="p-field">
-            <label style="font-size: 1.5rem;" class="mb-3" for="withoutgrouping">Zipcode</label>
-            <input placeholder="Enter Zipcode ..." type="number" [(ngModel)]="zipcode" class="p-inputtext">
+            <label style="font-size: 1.5rem;" class="mb-3"
+                for="withoutgrouping">Zipcode</label>
+            <input placeholder="Enter Zipcode ..." type="number"
+                [(ngModel)]="zipcode" class="p-inputtext">
         </div>
-        <div class="p-field d-flex flex-row align-items-center justify-content-end">
-            <p-button [style]="{'width': 'auto'}" (click)="geocodeZipCode()" label="Check The Weather"></p-button>
+        <div
+            class="p-field d-flex flex-row align-items-center justify-content-end">
+            <p-button [style]="{'width': 'auto'}" (click)="geocodeZipCode()"
+                label="Check The Weather"></p-button>
         </div>
     </div>
 </div>

@@ -19,11 +19,7 @@ import { MessageService } from 'primeng/api';
 import { GMapModule } from 'primeng/gmap';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LocationDetailsComponent
-  ],
+  declarations: [AppComponent, HomeComponent, LocationDetailsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,12 +31,9 @@ import { GMapModule } from 'primeng/gmap';
     InputNumberModule,
     ButtonModule,
     ToastModule,
-    GMapModule
+    GMapModule,
   ],
-  providers: [
-    MessageService,
-    Location
-  ],
-  bootstrap: [AppComponent]
+  providers: [MessageService, Location],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

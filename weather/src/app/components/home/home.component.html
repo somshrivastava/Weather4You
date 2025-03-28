@@ -17,9 +17,11 @@
     <div class="mb-5">
         <p-skeleton width="100%" height="10rem"></p-skeleton>
     </div>
-    <div class="mb-5 d-flex flex-row align-items-center justify-content-between">
+    <div
+        class="mb-5 d-flex flex-row align-items-center justify-content-between">
         <div style="display: inline;">
-            <p-skeleton shape="circle" width="20rem" height="20rem"></p-skeleton>
+            <p-skeleton shape="circle" width="20rem"
+                height="20rem"></p-skeleton>
         </div>
         <div style="display: inline;">
             <p-skeleton width="10rem" height="5rem"></p-skeleton>
@@ -39,57 +41,90 @@
 </div>
 <div *ngIf="isLoaded">
     <div class="d-flex flex-column align-items-start justify-content-center">
-        <h3 [@slideInFromLeft] class="mb-4 text-center w-100">Today In: {{todayWeather.city}}, {{todayWeather.country}} <span class="accent"><i (click)="openDialog('Location')" class="pointer fas fa-question-circle"></i></span></h3>
-        <div id="map" class="map-background mb-4 d-flex flex-column align-items-center justify-content-center"></div>
-        <div [@slideInFromRight] class="weather-information p-3 w-100 accent-background white d-flex flex-row align-items-center justify-content-between mb-4">
-            <div class="d-flex flex-column align-items-start justify-content-center">
+        <h3 [@slideInFromLeft] class="mb-4 text-center w-100">Today In:
+            {{todayWeather.city}}, {{todayWeather.country}} <span
+                class="accent"><i (click)="openDialog('Location')"
+                    class="pointer fas fa-question-circle"></i></span></h3>
+        <div id="map"
+            class="map-background mb-4 d-flex flex-column align-items-center justify-content-center"></div>
+        <div [@slideInFromRight]
+            class="weather-information p-3 w-100 accent-background white d-flex flex-row align-items-center justify-content-between mb-4">
+            <div
+                class="d-flex flex-column align-items-start justify-content-center">
                 <h1 class="mb-3">{{todayWeather.description}}</h1>
                 <h5>{{date}}</h5>
             </div>
-            <div class="d-flex flex-column align-items-start justify-content-center">
-                <h1 style="font-weight: 600;" class="display-2">{{todayWeather.temperature | number: "1.0-0"}}&#176;</h1>
-                <h5>Feels Like {{todayWeather.feelsLikeTemperature | number: "1.0-0"}}&#176;</h5>
+            <div
+                class="d-flex flex-column align-items-start justify-content-center">
+                <h1 style="font-weight: 600;"
+                    class="display-2">{{todayWeather.temperature | number:
+                    "1.0-0"}}&#176;</h1>
+                <h5>Feels Like {{todayWeather.feelsLikeTemperature | number:
+                    "1.0-0"}}&#176;</h5>
             </div>
         </div>
-        <div [@slideInFromLeft] class="weather-information p-3 w-100 white-background d-flex flex-row align-items-center justify-content-evenly mb-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
+        <div [@slideInFromLeft]
+            class="weather-information p-3 w-100 white-background d-flex flex-row align-items-center justify-content-evenly mb-4">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center">
                 <h4 class="accent mb-3">Wind</h4>
-                <h4 style="font-weight: 600;">{{todayWeather.windSpeed}} mph</h4>
+                <h4 style="font-weight: 600;">{{todayWeather.windSpeed}}
+                    mph</h4>
             </div>
-            <div class="d-flex flex-column align-items-center justify-content-center light-right-border" style="color: transparent; width: 0.25rem;">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center light-right-border"
+                style="color: transparent; width: 0.25rem;">
                 <span>T</span>
                 <span>T</span>
                 <span>T</span>
             </div>
-            <div class="d-flex flex-column align-items-center justify-content-center">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center">
                 <h4 class="accent mb-3">Humidity</h4>
                 <h4 style="font-weight: 600;">{{todayWeather.humidity}}%</h4>
             </div>
         </div>
-        <h3 [@slideInFromRight] class="mb-4 text-center w-100">5 Day Forecast</h3>
-        <div [@slideInFromLeft] class="weather-information p-4 w-100 white-background d-flex flex-column align-items-center justify-content-evenly">
-            <div *ngFor="let forecastDay of forecast" [class.pt-4]="forecast.indexOf(forecastDay) != 0" [class.pb-4]="forecast.indexOf(forecastDay) + 1 != forecast.length" [class.light-light-bottom-border]="forecast.indexOf(forecastDay) + 1 != forecast.length" class="d-flex flex-row align-items-center justify-content-center w-100 px-4">
-                <h4 style="width: 25%; text-align: left;">{{forecastDay.date}}</h4>
-                <h4 style="width: 50%; text-align: center;" class="accent">{{forecastDay.description}}</h4>
-                <h4 style="width: 25%; text-align: right;">{{forecastDay.temperature | number: "1.0-0"}}&#176;</h4>
+        <h3 [@slideInFromRight] class="mb-4 text-center w-100">5 Day
+            Forecast</h3>
+        <div [@slideInFromLeft]
+            class="weather-information p-4 w-100 white-background d-flex flex-column align-items-center justify-content-evenly">
+            <div *ngFor="let forecastDay of forecast"
+                [class.pt-4]="forecast.indexOf(forecastDay) != 0"
+                [class.pb-4]="forecast.indexOf(forecastDay) + 1 != forecast.length"
+                [class.light-light-bottom-border]="forecast.indexOf(forecastDay) + 1 != forecast.length"
+                class="d-flex flex-row align-items-center justify-content-center w-100 px-4">
+                <h4
+                    style="width: 25%; text-align: left;">{{forecastDay.date}}</h4>
+                <h4 style="width: 50%; text-align: center;"
+                    class="accent">{{forecastDay.description}}</h4>
+                <h4
+                    style="width: 25%; text-align: right;">{{forecastDay.temperature
+                    | number: "1.0-0"}}&#176;</h4>
             </div>
         </div>
     </div>
 
 </div>
-<p-dialog [closable]="false" [visible]="isPopUp" [modal]="true" styleClass="p-fluid">
+<p-dialog [closable]="false" [visible]="isPopUp" [modal]="true"
+    styleClass="p-fluid">
     <ng-template pTemplate="header">
-        <div class="px-3 pt-3 d-flex flex-row align-items-center justify-content-between w-100">
+        <div
+            class="px-3 pt-3 d-flex flex-row align-items-center justify-content-between w-100">
             <h2>Location Details</h2>
-            <i (click)="closeDialog()" style="font-size: 1.5rem;" class="pointer black pi pi-times"></i>
+            <i (click)="closeDialog()" style="font-size: 1.5rem;"
+                class="pointer black pi pi-times"></i>
         </div>
     </ng-template>
     <ng-template pTemplate="content">
         <div class="p-3">
-            <h4 class="mb-4"><span class="accent">Latitude:</span> {{todayWeather.latitude}}</h4>
-            <h4 class="mb-4"><span class="accent">Longitude:</span> {{todayWeather.longitude}}</h4>
-            <h4 class="mb-4"><span class="accent">City:</span> {{todayWeather.city}}</h4>
-            <h4><span class="accent">Country:</span> {{todayWeather.country}}</h4>
+            <h4 class="mb-4"><span class="accent">Latitude:</span>
+                {{todayWeather.latitude}}</h4>
+            <h4 class="mb-4"><span class="accent">Longitude:</span>
+                {{todayWeather.longitude}}</h4>
+            <h4 class="mb-4"><span class="accent">City:</span>
+                {{todayWeather.city}}</h4>
+            <h4><span class="accent">Country:</span>
+                {{todayWeather.country}}</h4>
         </div>
     </ng-template>
 </p-dialog>

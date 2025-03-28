@@ -2,16 +2,21 @@
   <div class="col-lg-4 col-sm-6 p-0 m-auto">
     <nav [@slideInFromTop] class='navbar navbar-expand-lg'>
       <a class='navbar-brand'>
-        <img src="./../assets/favicon.ico" style="width: 2.5rem; height: 2.5rem; margin-right: 0.5rem; transform: translateY(-2px);" alt="">
+        <img src="./../assets/favicon.ico"
+          style="width: 2.5rem; height: 2.5rem; margin-right: 0.5rem; transform: translateY(-2px);"
+          alt>
         <!-- <span class="white"><i class="fas fa-cloud-sun-rain mr-1"></i></span> -->
         <span class="accent">Weather</span>
         <span class="white">4You</span>
       </a>
       <div class="navbar-nav ml-auto">
-        <div [routerLink]="['home']" *ngIf="!showAddLocationButton && weatherService.getFromLocalStorage('location')" class="nav-item pointer">
+        <div [routerLink]="['home']"
+          *ngIf="!showAddLocationButton && weatherService.getFromLocalStorage('location')"
+          class="nav-item pointer">
           <h4 class="white"><i class="fa fa-home"></i> Home</h4>
         </div>
-        <div [routerLink]="['location-details']" *ngIf="showAddLocationButton" class="nav-item pointer">
+        <div [routerLink]="['location-details']" *ngIf="showAddLocationButton"
+          class="nav-item pointer">
           <h4 class="white"><i class="fa fa-search"></i> Search</h4>
         </div>
       </div>
@@ -20,7 +25,7 @@
       <router-outlet></router-outlet>
     </div>
     <footer class="footer">
-      <h1 class="footer-title">Developed by Som Shrivastava.</h1>
+      <h1 class="footer-title">Developed by Som Shrivastava</h1>
     </footer>
   </div>
 </div>

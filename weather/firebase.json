@@ -1,0 +1,15 @@
+{
+  "hosting": [
+    {
+      "site": "weather4you",
+      "public": "dist/weather",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
