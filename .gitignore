@@ -48,5 +48,5 @@ Thumbs.db
 *.mov
 *.wmv
 
-# environment.dev.ts
-# index.html
+environment.ts
+index.html
