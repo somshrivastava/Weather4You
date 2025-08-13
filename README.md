@@ -35,6 +35,21 @@ Weather App is a responsive web application that allows users to search for weat
 
 ## Installation
 
+
+**Note:** This project requires Node.js 16. Please use [nvm](https://github.com/nvm-sh/nvm) to ensure the correct version is used before running any npm commands.
+```sh
+# Install nvm if you haven't already
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Load nvm (restart your terminal if needed)
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install and use Node.js 16
+nvm install 16
+nvm use 16
+```
+
 1. Clone the repository:
 
 ```sh
