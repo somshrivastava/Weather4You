@@ -1,5 +1,9 @@
 # Weather App ☀️🌧️
 
+### Live Demo
+
+The app is deployed and available at: [https://weather4you.web.app/](https://weather4you.web.app/)
+
 ## Table of Contents
 
 - [Description](#description)
