@@ -59,14 +59,6 @@ npx ng serve
 # Visit http://localhost:4200
 ```
 
-### Deploy to Firebase
-
-```sh
-firebase login
-npx ng build --prod
-firebase deploy
-```
-
 ## License
 
 This project is licensed under the MIT License.
