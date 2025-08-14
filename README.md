@@ -1,4 +1,4 @@
-# Weather App ☀️🌧️
+# Weather4You ☀️🌧️
 
 ### Live Demo
 
@@ -15,7 +15,7 @@ The app is deployed and available at: [https://weather4you.web.app/](https://wea
 
 ## Description
 
-Weather App is a responsive web application that allows users to search for weather forecasts by location, view detailed weather information, and visualize locations on a map. Built with Angular and Firebase, it demonstrates modern frontend development and cloud deployment best practices.
+Weather4You is a responsive web application that allows users to search for weather forecasts by location, view detailed weather information, and visualize locations on a map. Built with Angular and Firebase, it demonstrates modern frontend development and cloud deployment best practices.
 
 ## Features
 
